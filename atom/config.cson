@@ -4,13 +4,14 @@
     disabledPackages: [
       "react"
     ]
+    telemetryConsent: "no"
     themes: [
       "one-dark-ui"
       "cobalt2-syntax"
     ]
   editor:
     fontFamily: "Menlo"
-    fontSize: 15
+    fontSize: 16
     invisibles:
       cr: " "
       eol: " "
