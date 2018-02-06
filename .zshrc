@@ -36,10 +36,10 @@ export PATH
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="random"
+ZSH_THEME="agnoster"
 
 # Z beats cd most of the time
-. ~/z/z.sh
+. $HOME/dotfiles/z/z.sh
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -101,7 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # fortune: brew install fortune ponysay
 fortune
 
-export NVM_DIR="/Users/jfinlays/.nvm"
+export NVM_DIR="~/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 
@@ -113,4 +113,3 @@ alias rm-xcode-derived-data="rm -rf ~/Library/Developer/Xcode/DerivedData/*"
 bindkey -e
 bindkey '^[[1;9C' forward-word
 bindkey '^[[1;9D' backward-word
-
