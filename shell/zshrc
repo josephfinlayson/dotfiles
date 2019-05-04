@@ -69,7 +69,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(fabric brew node npm history git-flow vagrant zsh-syntax-highlighting)
+plugins=(fabric brew node npm history git-flow vagrant zsh-syntax-highlighting git)
 
 # User configuration
 
@@ -93,6 +93,9 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 
+# TODO make better
+source z/z.sh
+
 # Source local extra (private) settings specific to machine if it exists
 [ -f ~/.zsh.local ] && source ~/.zsh.local
 
@@ -101,3 +104,6 @@ source $ZSH/oh-my-zsh.sh
 
 # fortune: brew install fortune ponysay
 fortune | ponysay
+
+# for pipenv
+export PIPENV_VENV_IN_PROJECT=1

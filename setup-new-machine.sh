@@ -112,8 +112,8 @@ bash < <( curl https://raw.github.com/jamiew/git-friendly/master/install.sh)
 # github.com/rupa/z - hooked up in .zshrc
 # consider reusing your current .z file if possible. it's painful to rebuild :)
 # or use autojump instead https://github.com/wting/autojump
-git clone https://github.com/rupa/z.git ~/z
-chmod +x ~/z/z.sh
+# git clone https://github.com/rupa/z.git ~/z
+# chmod +x ~/z/z.sh
 
 
 # my magic photobooth symlink -> dropbox. I love it.

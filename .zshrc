@@ -1,6 +1,7 @@
+set +x
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.oh-my-zsh
-
+EDITOR="vim"
 # Directories to be prepended to $PATH
 declare -a dirs_to_prepend
 dirs_to_prepend=(
@@ -36,7 +37,7 @@ export PATH
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussel"
+ZSH_THEME="dracula"
 
 # Z beats cd most of the time
 . $HOME/dotfiles/z/z.sh
@@ -70,7 +71,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(fabric brew node npm history git-flow vagrant zsh-syntax-highlighting gradle git)
+plugins=(brew node npm vi-mode history git-flow zsh-syntax-highlighting gradle git)
 
 # User configuration
 
@@ -101,17 +102,22 @@ source $ZSH/oh-my-zsh.sh
 . <(npm completion)
 
 # fortune: brew install fortune ponysay
-fortune
+# fortune
 
-export NVM_DIR="~/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
+# n is the new NVM
+# export NVM_DIR="~/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export ANDROID_HOME=~/Library/Android/sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
-alias rm-xcode-derived-data="rm -rf ~/Library/Developer/Xcode/DerivedData/*"
-bindkey -e
-bindkey '^[[1;9C' forward-word
+bindkey -v
+bindkey '^[C]' forward-word
 bindkey '^[[1;9D' backward-word
+echo "done"
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+
+# COMMENTED BECAUSE VERY SLOW
+# export SDKMAN_DIR="/Users/jfinlays/.sdkman"
+# [[ -s "/Users/jfinlays/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/jfinlays/.sdkman/bin/sdkman-init.sh"
