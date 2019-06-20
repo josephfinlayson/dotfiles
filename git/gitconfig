@@ -261,7 +261,7 @@
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [user]
-	name = "Joseph "
-	email = joseph_finlayson@mckinsey.com
+	name = "Joseph Finlayson"
+	email = joseph_finlayson@gmail.com
 [commit]
 	template = /Users/jfinlays/.stCommitMsg
