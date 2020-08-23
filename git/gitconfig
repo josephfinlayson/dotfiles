@@ -179,7 +179,7 @@
 
 # Git mergetool
 [merge]
-        tool = opendiff
+	tool = diffmerge
 
 [core]
         editor = nano
@@ -265,3 +265,7 @@
 	email = joseph_finlayson@gmail.com
 [commit]
 	template = /Users/jfinlays/.stCommitMsg
+[diff]
+	tool = diffmerge
+[mergetool "diffmerge"]
+	trustexitcode = true

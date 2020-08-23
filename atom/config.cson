@@ -11,7 +11,7 @@
     ]
   editor:
     fontFamily: "Menlo"
-    fontSize: 16
+    fontSize: 17
     invisibles:
       cr: " "
       eol: " "

@@ -42,7 +42,7 @@ parse_git_branch() {
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
-# * ~/.extra can be used for other settings you don’t want to commit.
+# * ~/.extra can be used for other settings you donât want to commit.
 
 source ~/.bash_prompt
 
@@ -113,3 +113,7 @@ alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/jfinlays/.sdkman"
 [[ -s "/Users/jfinlays/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/jfinlays/.sdkman/bin/sdkman-init.sh"
+
+export PATH="/Applications/ARX-3.8.0.app/Contents/bin:$PATH"
+
+export PATH="$HOME/.poetry/bin:$PATH"

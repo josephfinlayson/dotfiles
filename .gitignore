@@ -4,6 +4,10 @@ atom/.apm
 atom/packages
 atom/storage
 atom/blob-store
+atom/recovery
 chrome
 webstorm/settings.jar
 key.json
+key-admin.json
+key-owner.json
+

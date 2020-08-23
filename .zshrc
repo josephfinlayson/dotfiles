@@ -9,7 +9,6 @@ dirs_to_prepend=(
   "/usr/local/sbin"
   "/usr/local/git/bin"
     "/usr/local/"
-    "$HOME/Library/Python/2.7/bin"
   "/usr/local/mysql/bin"
   "/sw/bin/"
   "$HOME/dotfiles/bin"
@@ -100,7 +99,7 @@ source $ZSH/oh-my-zsh.sh
 
 # npm tab completion
 . <(npm completion)
-
+GITHUB_OAUTH_TOKEN=0aa6e9c031b9cd8ed4d4684f36cb6a796ae7343f
 # fortune: brew install fortune ponysay
 # fortune
 
@@ -108,26 +107,36 @@ source $ZSH/oh-my-zsh.sh
 # export NVM_DIR="~/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
-export ANDROID_HOME=~/Library/Android/sdk
-PATH=${PATH}:${ANDROID_HOME}/tools
-PATH=${PATH}:${ANDROID_HOME}/platform-tools
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 bindkey -v
 bindkey '^[C]' forward-word
 bindkey '^[[1;9D' backward-word
-echo "done"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 
 # COMMENTED BECAUSE VERY SLOW
 # export SDKMAN_DIR="/Users/jfinlays/.sdkman"
 # [[ -s "/Users/jfinlays/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/jfinlays/.sdkman/bin/sdkman-init.sh"
 
-GCLOUD_SERVICE_KEY=$(cat key.json)
+GCLOUD_SERVICE_KEY=$(cat ~/dotfiles/key.json)
+GOOGLE_APPLICATION_CREDENTIALS=~/dotfiles/key-owner.json
 
 export GEM_HOME=~/.gems
 export PATH="$GEM_HOME/bin:$PATH"
-
-
 export PROJECT_ID=sable-242108
-
 export PATH
+
+echo "done"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/jfinlays/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jfinlays/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/jfinlays/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jfinlays/google-cloud-sdk/completion.zsh.inc'; fi
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+# alias python=/usr/local/bin/python3.8

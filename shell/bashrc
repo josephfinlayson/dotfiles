@@ -1,1 +1,3 @@
 [ -n "$PS1" ] && source ~/.bash_profile
+
+export PATH="/Applications/ARX-3.8.0.app/Contents/bin:$PATH"
